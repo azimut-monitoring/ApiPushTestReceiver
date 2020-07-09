@@ -1,0 +1,25 @@
+﻿@page
+@model ApiPushTestReceiver.Pages.IndexPageModel
+<html>
+<body>
+
+    @if (Model.Data.Count() == 0)
+    {
+           @: No data to display
+    }
+    else
+    {
+        <table border=1>
+            <tr>
+                <th>Messages</th>
+            </tr>
+            @foreach (var m in Model.Data)
+            {
+                <tr>
+                    <td>@m</td>
+                </tr>
+            }
+        </table>
+    }
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿
+
+# Send a sample payload to the API
+POST https://localhost:5001/push
+api-key: 3eb4e36d-95e1-48ef-94c0-7339a2badb4e
+content-type: application/json
+
+{
+  "Version": 1,
+  "Transaction": "tran3",
+  "Type": "Data",
+  "Payload": {
+    "Points": [
+      {
+        "Timestamp": "2019-03-05T10:00:00Z",
+        "LocationId": "5c60f693-bef5-e011-a485-80ee7300c695",
+        "LocationName": "My Location",
+        "RawData": {
+          "Temperature": 24.0,
+          "RelativeHumidity": 42.0,
+          "Luminosity": 90.0,
+          "CO2": 1100.0,
+          "PM1": 1.7
+        },
+        "Indicators": {
+          "IndoorCO2Daily": {
+            "Value": 3.0,
+            "CompletionProgress": 0.1
+          },
+          "IndoorCO2ICONEDaily": {
+            "Value": 3.0,
+            "CompletionProgress": 0.1
+          },
+          "IndoorParticlesDaily": {
+            "Value": 1.0,
+            "CompletionProgress": 0.1
+          }
+        }
+      },
+      {
+        "Timestamp": "2019-03-05T10:15:00Z",
+        "LocationId": "5c60f693-bef5-e011-a485-80ee7300c695",
+        "LocationName": "My Location",
+        "RawData": {
+          "Temperature": 24.2,
+          "RelativeHumidity": 42.0,
+          "Luminosity": 90.0,
+          "CO2": 1100.0,
+          "PM1": 1.9
+        },
+        "Indicators": {}
+      },
+      {
+        "Timestamp": "2019-03-05T10:30:00Z",
+        "LocationId": "5c60f693-bef5-e011-a485-80ee7300c695",
+        "LocationName": "My Location",
+        "RawData": {
+          "Temperature": 24.2,
+          "RelativeHumidity": 43.0,
+          "Luminosity": 90.0,
+          "CO2": 1200.0,
+          "PM1": 1.9
+        },
+        "Indicators": {}
+      },
+      {
+        "Timestamp": "2019-03-05T10:45:00Z",
+        "LocationId": "5c60f693-bef5-e011-a485-80ee7300c695",
+        "LocationName": "My Location",
+        "RawData": {
+          "Temperature": 24.2,
+          "RelativeHumidity": 43.0,
+          "Luminosity": 90.0,
+          "CO2": 1360.0,
+          "PM1": 1.4
+        },
+        "Indicators": {}
+      }
+    ]
+  }
+}
